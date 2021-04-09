@@ -8,21 +8,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav id="hamnav">
-        <!--the hamburger-->
-        
-    <div class="nav-bar" id="hamitems">
+    <nav> 
+    <div class="nav-bar">
         <div class="logo">Snapshot</div>
-        <ul class="nav-links" id="menu">
-            <label for="hamburger">&#9776;</label>
-        <input type="checkbox" id="hamburger"/>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
+        <ul class="nav-links">
+            <li class="menu"><a href="#" class="link">Home</a></li>
+            <li class="menu"><a href="#" class="link">About</a></li>
+            <li class="menu"><a href="#gallery" class="link">Gallery</a></li>
+            <li class="menu"><a href="#contact" class="link">Contact</a></li>
         </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+
+        </div>
         
     </div>
+      </div>
     </nav>
 
     <!-- Hero section -->
@@ -72,7 +75,7 @@
             <h4>Gallery</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, sapiente. Nullae rem!</p>
         </div>
-        <div class="gallery-img">
+        <div id="gallery" class="gallery-img">
             <div>
                 <div class="img">
                     <img src="https://image.freepik.com/free-vector/shining-circle-purple-lighting-isolated-dark-background_1441-2396.jpg" alt="">
@@ -98,7 +101,7 @@
             <h4>Send a message</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, sapiente. Nuleos rem!</p>
         </div>
-        <div class="footer-input">
+        <div id="contact" class="footer-input">
             <input type="text" placeholder="Name"> 
             <input type="email" placeholder="Email">
         </div>
@@ -110,5 +113,27 @@
         </div>
         <h6>Copyright &copy; 2021 Zuri Training.</h6>
     </div>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navlinks = document.querySelector(".nav-links")
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu(){
+            hamburger.classList.toggle("active");
+            navlinks.classList.toggle("active");
+        }
+
+        
+        const link = document.querySelectorAll(".link");
+
+        link.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+        hamburger.classList.remove("active");
+        navlinks.classList.remove("active");
+}
+    </script>
+   
 </body>
 </html>
