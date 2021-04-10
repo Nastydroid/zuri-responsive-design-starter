@@ -107,6 +107,7 @@ ul.nav-links {
         color: tomato;
     }
     .hamburger{
+        margin-top: 5.5%;
         display: block;
         cursor: pointer;
     }
