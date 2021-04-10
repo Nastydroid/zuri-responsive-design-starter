@@ -19,6 +19,9 @@
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: tomato;
+    
+
+    
 }
 
 nav.menu{
@@ -40,7 +43,7 @@ div.nav-bar {
 
 
 @media (max-width: 500px) {
-    div.nav-bar{
+    .nav-bar{
         flex-direction: column;
     }
     
@@ -59,6 +62,7 @@ div.logo {
     div.logo{
         padding-left: 0px;
         padding-right: 5rem;
+        
     }
     
 }
@@ -70,8 +74,9 @@ ul.nav-links {
     display: flex;
     margin: 0;
     padding: 0;
+    
 }
-@media (max-width: 768px){
+@media (max-width: 990px){
     .nav-links{
         position: absolute;
         left: -100%;
@@ -83,15 +88,20 @@ ul.nav-links {
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+        align-self: flex-end;
+        display: initial;
     }
     .hamburger.active .bar:nth-child(2){
         opacity: 0;
+        
     }
     .hamburger.active .bar:nth-child(1){
         transform: translateY(8px) rotate(45deg);
+        
     }
     .hamburger.active .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
+        
     }
 
     .nav-links.active{
@@ -100,6 +110,7 @@ ul.nav-links {
 
     .menu{
         margin: 2.5rem 0;
+        
 
     }
 
@@ -107,8 +118,11 @@ ul.nav-links {
         color: tomato;
     }
     .hamburger{
+        margin-top: 5%;
         display: block;
         cursor: pointer;
+        
+        
     }
 }
 
@@ -169,6 +183,15 @@ div.hero-content-heading h3 {
     color: #bcc3c7;
     text-overflow: ellipsis;
 }
+@media(max-width: 768px){
+    div.hero-content-heading h3{
+        font-size: 3rem;
+        font-weight: 300;
+        font-family: monospace;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+}
 
 
 div.hero-content-heading p {
@@ -182,7 +205,8 @@ div.hero-content-heading p {
 @media (max-width: 990px) {
     div.hero-content-heading p{
         text-align: center;
-        padding: auto;
+        white-space: inherit;
+
     }
     
 }
